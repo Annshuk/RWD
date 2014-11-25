@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0}
+body{ font:12px/18px normal Arial, Helvetica, sans-serif; width:100%; text-align:center; background-color:#f2f2f2; color:#333333}
+.clear{clear:both;}
+.wrapper{ margin:0 auto; position:relative; text-align:left; width:995px; border-left:1px #dcdcdc solid; border-right:1px #dcdcdc solid; 
+-webkit-box-shadow: 0px 0px 5px 5px rgba(92,92,92,0.58);
+-moz-box-shadow: 0px 0px 5px 5px rgba(92,92,92,0.58);
+box-shadow: 0px 0px 5px 5px rgba(92,92,92,0.58);
+}
+header{ /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: -moz-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%); /* FF3.6+ */
+ border-bottom:1px #d0d0d0 solid; padding-bottom:3px;}
+.logo{ background-color:#e1e1e1; padding:15px 10px 15px 30px; font-size:22px; width:220px; text-transform:capitalize; font-family:HelveticaNeue, "HelveticaNeueLT Std Med", "HelveticaNeueLT Std"; float: left; color:#5f697a; margin:10px 20px 0;
+ display:inline-block}
+
+/*===Search====*/
+.search-container{ width:96%; display:inline-block; padding-bottom:10px; border-bottom:1px #dcdcdc solid; padding:10px 20px 22px}
+.search-box{ width:55%; float:left; position:relative}
+.search-box .search-input{ display:inline; float:left; width:90%;}
+.search-box .search-input input{padding:7px 10px; line-height:20px; width:96%; border:1px solid #bcbcbc; border-radius:2px;  box-shadow:inset 0 0 4px #AAA;  border-right:0}
+.search-box .search-btn{ background:url(../imgs/search_btn.jpg) no-repeat; border:0; height:36px; width:52px; text-indent:-99999px; margin-left:-5px; cursor:pointer}
+/*=======more-dropdown==*/
+.more-search{ border:1px #d0d0d0 solid;  float:left; list-style:none; background: -moz-linear-gradient(top, #fdfcfc 0%, #edecec 100%); padding:0 10px 0 10px; position:relative}
+.more-search li a{ text-decoration:none; padding:8px 10px; display:block}
+.more-search li ul, .right-side ul li ul{ list-style:none; display:none; position:absolute; background:#ffffff; border:1px #dcdcdc solid; width:93%; padding:5px; left:0;}
+.more-search li ul li, .right-side ul li ul li{ display:block}
+.more-search li ul li a, .right-side ul li ul li a{ background-image:none; padding:5px 10px; color:#000}
+.more-search li ul li a:focus, .more-search li ul li a:active{ outline:0;}
+/*===top-Menu=*/
+.right-side{ position:absolute; top:10px; right:10px; }
+.right-side ul{ list-style:none;}
+.right-side ul li{ display:block;}
+.right-side ul li a, .more-search li a{background: url(../imgs/dropdown.jpg) no-repeat right center; padding-right:20px; text-decoration:none; color:#757575}
+
+/*==nav-menu==*/
+.nav-menu{ width:96%; padding:0px 20px; display:inline-block}
+.nav-menu ul{ list-style:none}
+.nav-menu ul li:first-child{ margin-left:0; margin-right:5px;}
+.nav-menu ul li{ float:left;}
+.nav-menu ul li a{ text-decoration:none; color:#333; padding:5px 20px; background:url(../imgs/circle.jpg) no-repeat left center; display:block; font-size:14px;}
+.nav-menu ul li a.first-child{background:none; padding-left:0;}
+
+/*=========Main Container===*/
+.main-container{ width:96%; padding:2%; border-top:1px #fff solid; box-shadow:0 0 2px #f9f9f9; background:#fff; margin:0 auto}
+.main-container .space{ padding:2% 5%; display:inline-block}
+.main-container .breadclum{}
+.main-container .article{ width:70%; float:left;}
+.title, .sub-title{ display:block; font-family:"Times New Roman", Times, serif; font-size:30px; line-height:40px; font-weight:300; padding:10px 0}
+.sub-title{font-size:25px; line-height:40px; }
+.download-btn{ display:block; border:0; cursor:pointer; margin-top:20px;}
+.main-container aside{ float:right; margin-right:5%}
+
+
+@media only screen and (max-width:640px) {
+	.wrapper{ width:100%;} 
+}
+
+
+
+
+
+
+
