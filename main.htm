@@ -36,12 +36,14 @@
          </li>
       </ul>
     </div>
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="" class="first-child">Home</a></li>
-        <li><a href="">Contact us</a></li>
-      </ul>
+    <a class="menu" href="#" id="homeMenu"></a>
+    <nav class="nav-menu">    
+    	<ul>
+            <li><a href="#" class="first-child">Home</a></li>
+            <li><a href="#">Contact us</a></li>
+      </ul>      
     </nav>
+    <div class="clear"></div>
   </header>
   <section class="main-container">
   <div class="space">
@@ -61,35 +63,34 @@
 </div>
 <script src="scripts/jquery.min.js"></script>
 <script>
-
-
-
-
 $(document).ready(function(e){
 	var popup='';	
 	$(document.body).on('click', 'li>a', function(){		
 		if($(this).next().length!=0){
 		popup = $(this).attr('id');
-		$(this).next().slideUp();
+		$(this).next().slideUp();		
 			if($(this).next().is(":hidden")){
 				$(this).next().slideDown();
 			}
 		}
 	});
-
-//hide all;
-$('body').on('click', function(e){		 
+	$('#homeMenu').on('click', function(){
+		$('.nav-menu').slideToggle();	
+		
+	});
+//hide if open or on click others all;
+$('*').on('click', function(e){		 
 	var $target = $(e.target);
-	var container = $("#"+popup);		
-	 if (!container.is(e.target) && container.next().has(e.target).length != 1){
-		 console.log(popup)
-		$(container).next().slideUp();
+	var container = $("#"+popup);
+	 if (!container.is(e.target) && container.next().has(e.target).length != 1){	
+		$(container).next().slideUp();		
 	}
-	
 });
-
-  	
-	
+$('body').on('click', function(e){	
+if(!$('.menu').is(e.target) && $('.nav-menu').has(e.target).length != 1){
+		$('.nav-menu').slideUp();	
+	}
+});
 });
 
 
